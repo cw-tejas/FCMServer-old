@@ -1,6 +1,14 @@
 # FCM Server
 
+<div>
+   <img src="https://firebase.google.com/static/docs/cloud-messaging/images/diagram-FCM.png" alt="Sample Image" width="500" height="300">
+   <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*SAEqPgTmtd5F2QaqauwiCQ.png" alt="Sample Image" width="500" height="300">
+</div>
+
+
 A Node.js server for sending Firebase Cloud Messaging (FCM) push notifications using the Firebase Admin SDK.
+
+_This server refers to "Trusted Environment" and "Backend" in the above images, respectively_
 
 ## Features
 
