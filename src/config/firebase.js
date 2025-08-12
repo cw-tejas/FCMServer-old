@@ -1,4 +1,5 @@
 const admin = require("firebase-admin");
+const path = require("path");
 require("dotenv").config();
 
 class FirebaseConfig {
@@ -26,7 +27,8 @@ class FirebaseConfig {
       }
       // Option 2: Use service account key file
       else if (process.env.FIREBASE_SERVICE_ACCOUNT_PATH) {
-        serviceAccount = require(process.env.FIREBASE_SERVICE_ACCOUNT_PATH);
+        const serviceAccountPath = path.resolve(process.cwd(), process.env.FIREBASE_SERVICE_ACCOUNT_PATH);
+        serviceAccount = require(serviceAccountPath);
       } else {
         throw new Error(
           "Firebase configuration not found. Please set environment variables or provide service account key file."
